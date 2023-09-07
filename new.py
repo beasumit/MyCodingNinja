@@ -1,32 +1,17 @@
-from sys import stdin
+import matplotlib.pyplot as plt
+import numpy as np
 
-def arrange(arr,n):
-    left = 0
-    right = n - 1
-    counter = 1
+x = np.arange(0,40,2)
+y = x
 
-    while left <= right:
+x1 = [0,1,2,3,4,5,6,7,9,10]
+y1 = [1,2,5,10,17,26,37,50,82,101]
 
-        if counter%2 == 1:
-            arr[left] = counter
-            counter += 1
-            left += 1
-        else :
-            arr[right] = counter
-            counter += 1
-            right -= 1
-
-def printList(arr, n):
-    for i in range(n):
-        print(arr[i], end = ' ')
-    print()
-
-#main
-t = int(stdin.readline().strip())
-
-while t > 0:
-    n = int(stdin.readline().strip())
-    arr = n * [0]
-    arrange(arr, n)
-    printList (arr, n)
-    t -= 1
+plt.plot(x1, y1, label='x[i]=x[i]^2 +1')
+plt.plot(x, y, label='x[i]=y[i]')
+plt.ylabel('Y')
+plt.xlabel('X')
+plt.legend()
+plt.show()
+print("0 to 10")
+print("25 to 35")
