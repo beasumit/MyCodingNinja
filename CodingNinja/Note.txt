@@ -1,1 +1,5 @@
 This folder is created for basic rough work and addition fo files are based on random event on random dates.
+-------
+The arithmetic operation in python follow the structer as:-
+1. multiplication -> divison -> Module
+2. Addition -> Substraction
