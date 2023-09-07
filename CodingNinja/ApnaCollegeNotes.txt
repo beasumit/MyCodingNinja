@@ -3,3 +3,11 @@ This folder is created for basic rough work and addition fo files are based on r
 The arithmetic operation in python follow the structer as:-
 1. multiplication -> divison -> Module
 2. Addition -> Substraction
+
+
+-------------
+using if else statement with only if option will giving short operation with only one part that focus on one aspect of the problem.
+-------
+A calulator can be also made using if else as shown in code file.
+
+--------
