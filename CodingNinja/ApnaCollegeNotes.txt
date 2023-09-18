@@ -11,4 +11,3 @@ using if else statement with only if option will giving short operation with onl
 A calulator can be also made using if else as shown in code file.
 
 --------
-date :- 18/09/2023
