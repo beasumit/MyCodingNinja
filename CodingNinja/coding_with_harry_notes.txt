@@ -1,4 +1,6 @@
 date :- 18/09/2023
 --------
 This is for the notes on the Coding with Harry Python video.
->
+>Main file has the information on basics of python and key update in retrospect to new changes in python.
+>later on there are total of 5 mini project to understand the workking of python on small scale and its application in real world.
+>all the project give small info in real world usage and also give info about transition to large scale project .
