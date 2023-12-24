@@ -19,6 +19,7 @@ try:
     resposne = requests.get(scrap_url,headers = {'user-Agent':'chrome/120.0.6099.110'})
     main = BeautifulSoup(resposne.text,"html.parser")
     title = main.find_all("li",class_="clearfix job-bx wht-shd-bx")
+    pandap = []
     for i in title:
         name = i.header.h3.get_text().strip()
         location = i.ul.find_all("li")[1].span.get_text().strip()
@@ -26,15 +27,23 @@ try:
         experience = i.ul.li.get_text().replace('card_travel',' ')
         posted = i.div.div.div.find('span',class_="sim-posted").get_text().strip()
         link = i.header.h2.a["href"]
-        print(f'Company Name : {name}'+"\n")
-        print(f'Company Location : {location}'+"\n")
-        print(f'Skill Required : {skill}'+"\n")
-        print(f'Experience : {experience}'+"\n")
-        print(f'Posted On : {posted}'+"\n")
-        print(f'Link :{link}'+'\n')
-        print("---------------------------------")
+        # print(f'Company Name : {name}'+"\n")
+        # print(f'Company Location : {location}'+"\n")
+        # print(f'Skill Required : {skill}'+"\n")
+        # print(f'Experience : {experience}'+"\n")
+        # print(f'Posted On : {posted}'+"\n")
+        # print(f'Link :{link}'+'\n')
+        # print("---------------------------------")
+        info ={'Name':name,
+                'Company Location':location,
+                'Skill Required' : skill,
+                'Experience' : experience,
+                'Posted On' : posted,
+                'Link' : link}
+        pandap.append(info)
         sheet.append([name,location,skill,experience,posted,link])
-        
+    data_set = pd.DataFrame(pandap)
+    data_set.to_excel('Movie_data_set.xlsx')
 except Exception as e:
     print(e)
 
